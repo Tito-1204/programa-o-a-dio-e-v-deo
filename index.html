@@ -6,18 +6,18 @@
   <title>Programação de Agosto e Setembro</title>
   <style>
     :root {
-      --bg-main: #f4f4f4;          /* Fundo cinza neutro bem claro */
-      --card-bg: #ffffff;          /* Fundo branco puro */
-      --header-bg: #4d4d4d;        /* Cinza um pouco mais claro (mantém texto branco) */
+      --bg-main: #f4f4f4;
+      --card-bg: #ffffff;
+      --header-bg: #4d4d4d;
       --header-text: #ffffff;
-      --header-subtext: #dddddd;   /* Cinza claro para subtexto no cabeçalho */
-      --border-grid: #c8c8c8;      /* Linhas de divisão internas das células */
-      --text-dark: #111111;        /* Texto principal quase preto */
-      --text-muted: #555555;      /* Texto secundário em cinza */
-      --badge-bg: #e5e5e5;        /* Fundo dos crachás em cinza claro */
-      --badge-text: #222222;      /* Texto dos crachás */
-      --row-alt: #f8f8f8;          /* Alternância de linhas */
-      --row-hover: #ececec;        /* Destaque ao passar o mouse */
+      --header-subtext: #dddddd;
+      --border-grid: #c8c8c8;
+      --text-dark: #111111;
+      --text-muted: #555555;
+      --badge-bg: #e5e5e5;
+      --badge-text: #222222;
+      --row-alt: #f8f8f8;
+      --row-hover: #ececec;
     }
 
     * {
@@ -42,14 +42,13 @@
       max-width: 950px;
       background-color: var(--card-bg);
       border-radius: 12px;
-      /* Sombra leve misturada com brilho/shadow branco para suavizar com o fundo */
-      box-shadow: 0 0 25px 2px rgba(255, 255, 255, 0.9), 0 8px 20px rgba(0, 0, 0, 0.04);
-      border: none;               /* Borda externa removida */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+      border: none;
       overflow: hidden;
     }
 
     .title-box {
-      background-color: #f8f8f8;   /* Fundo cinza claro */
+      background-color: #f8f8f8;
       color: var(--text-dark);
       padding: 22px 20px;
       text-align: center;
@@ -71,7 +70,6 @@
       text-align: center;
     }
 
-    /* Cabeçalho com tom de cinza ajustado */
     th {
       background-color: var(--header-bg);
       color: var(--header-text);
@@ -81,7 +79,7 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border: 1px solid var(--border-grid);
-      border-top: none;           /* Remove borda no topo da tabela */
+      border-top: none;
     }
 
     th .sub-header {
@@ -94,7 +92,6 @@
       letter-spacing: normal;
     }
 
-    /* Células da tabela */
     td {
       padding: 16px 12px;
       border: 1px solid var(--border-grid);
@@ -103,7 +100,6 @@
       transition: background-color 0.15s ease;
     }
 
-    /* Removendo bordas nas extremidades para ficar fluido com o fundo do cartão */
     tr td:first-child, tr th:first-child {
       border-left: none;
     }
@@ -209,7 +205,6 @@
       </tr>
     </thead>
     <tbody>
-      <!-- 1ª Semana -->
       <tr>
         <td>
           <span class="week-title">1ª Semana</span>
@@ -227,7 +222,6 @@
           <span class="tribuna-person">Tito</span>
         </td>
       </tr>
-      <!-- 2ª Semana -->
       <tr>
         <td>
           <span class="week-title">2ª Semana</span>
@@ -244,7 +238,6 @@
           <span class="tribuna-person">Morse</span>
         </td>
       </tr>
-      <!-- 3ª Semana -->
       <tr>
         <td>
           <span class="week-title">3ª Semana</span>
@@ -261,7 +254,6 @@
           <span class="tribuna-person">Hélder</span>
         </td>
       </tr>
-      <!-- 4ª Semana -->
       <tr>
         <td>
           <span class="week-title">4ª Semana</span>
