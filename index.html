@@ -6,19 +6,19 @@
   <title>Programação de Agosto e Setembro</title>
   <style>
     :root {
-      --bg-main: #f8fafc;
-      --card-bg: #ffffff;
-      --header-bg: #475569;        /* Cinza médio/escuro elegante */
+      --bg-main: #f4f4f4;          /* Fundo cinza neutro bem claro */
+      --card-bg: #ffffff;          /* Fundo branco puro */
+      --header-bg: #333333;        /* Cinza escuro neutro para o cabeçalho */
       --header-text: #ffffff;
-      --header-subtext: #cbd5e1;
-      --border-strong: #94a3b8;    /* Borda externa bem definida */
-      --border-grid: #cbd5e1;      /* Linhas de divisão visíveis */
-      --text-dark: #0f172a;
-      --text-muted: #475569;
-      --badge-bg: #e2e8f0;
-      --badge-text: #334155;
-      --row-alt: #f1f5f9;          /* Alternância de cinza claro */
-      --row-hover: #e2e8f0;
+      --header-subtext: #cccccc;   /* Cinza claro neutro para subtexto */
+      --border-strong: #555555;    /* Borda externa bem marcada e visível */
+      --border-grid: #b0b0b0;      /* Linhas de divisão das células visíveis */
+      --text-dark: #111111;        /* Texto principal quase preto */
+      --text-muted: #555555;      /* Texto secundário em cinza */
+      --badge-bg: #e5e5e5;        /* Fundo dos crachás em cinza claro */
+      --badge-text: #222222;      /* Texto dos crachás */
+      --row-alt: #f8f8f8;          /* Alternância de linhas */
+      --row-hover: #ececec;        /* Destaque ao passar o mouse */
     }
 
     * {
@@ -42,14 +42,14 @@
       width: 100%;
       max-width: 950px;
       background-color: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       border: 2px solid var(--border-strong);
       overflow: hidden;
     }
 
     .title-box {
-      background-color: #334155;
+      background-color: #1a1a1a;   /* Preto suave/Cinza grafite */
       color: #ffffff;
       padding: 22px 20px;
       text-align: center;
@@ -70,7 +70,7 @@
       text-align: center;
     }
 
-    /* Cabeçalho Cinza */
+    /* Cabeçalho Cinza Escuro Neutro */
     th {
       background-color: var(--header-bg);
       color: var(--header-text);
@@ -92,7 +92,7 @@
       letter-spacing: normal;
     }
 
-    /* Células com divisões bem visíveis */
+    /* Células com divisões fortemente marcadas em cinza neutro */
     td {
       padding: 16px 12px;
       border: 1px solid var(--border-grid);
@@ -126,7 +126,7 @@
 
     .person-main {
       font-weight: 700;
-      color: #1e293b;
+      color: #111111;
       font-size: 15px;
       display: block;
       margin-bottom: 5px;
@@ -140,18 +140,18 @@
       border-radius: 12px;
       font-size: 12px;
       font-weight: 500;
-      border: 1px solid #cbd5e1;
+      border: 1px solid #cccccc;
     }
 
     .tribuna-person {
       font-weight: 700;
-      color: #0f172a;
+      color: #111111;
       font-size: 15px;
-      background-color: #e2e8f0;
+      background-color: #e5e5e5;
       padding: 6px 14px;
       border-radius: 6px;
       display: inline-block;
-      border: 1px solid #cbd5e1;
+      border: 1px solid #b0b0b0;
     }
 
     @media (max-width: 640px) {
