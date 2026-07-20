@@ -3,53 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programação</title>
+  <title>Programação de Agosto e Setembro</title>
   <style>
     :root {
-      --bg-body: #f4f4f5;
-      --bg-table: #ffffff;
-      --text-main: #18181b;
-      --text-muted: #71717a;
-      --border-color: #e4e4e7;
-      --header-bg: #18181b;
+      --bg-main: #f8fafc;
+      --card-bg: #ffffff;
+      --header-bg: #475569;        /* Cinza médio/escuro elegante */
       --header-text: #ffffff;
-      --header-muted: #a1a1aa;
-      --row-hover: #fcfcfd;
+      --header-subtext: #cbd5e1;
+      --border-strong: #94a3b8;    /* Borda externa bem definida */
+      --border-grid: #cbd5e1;      /* Linhas de divisão visíveis */
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --badge-bg: #e2e8f0;
+      --badge-text: #334155;
+      --row-alt: #f1f5f9;          /* Alternância de cinza claro */
+      --row-hover: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background-color: var(--bg-body);
-      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
       padding: 40px 20px;
-      margin: 0;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       min-height: 100vh;
     }
 
     .container {
-      max-width: 1000px;
       width: 100%;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-weight: 700;
-      font-size: 26px;
-      letter-spacing: -0.5px;
-      color: var(--text-main);
-      text-transform: uppercase;
-    }
-
-    .table-wrapper {
-      background-color: var(--bg-table);
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.02);
+      max-width: 950px;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      border: 2px solid var(--border-strong);
       overflow: hidden;
-      border: 1px solid var(--border-color);
+    }
+
+    .title-box {
+      background-color: #334155;
+      color: #ffffff;
+      padding: 22px 20px;
+      text-align: center;
+      border-bottom: 2px solid var(--border-strong);
+    }
+
+    .title-box h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 0;
     }
 
     table {
@@ -58,63 +70,104 @@
       text-align: center;
     }
 
+    /* Cabeçalho Cinza */
     th {
       background-color: var(--header-bg);
       color: var(--header-text);
-      padding: 22px 15px;
+      padding: 16px 12px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.5px;
+      border: 1px solid var(--border-strong);
     }
 
-    th .sub-text {
-      color: var(--header-muted);
-      margin-top: 4px;
+    th .sub-header {
+      display: block;
+      color: var(--header-subtext);
+      font-size: 11px;
       font-weight: 400;
-      font-size: 12px;
+      margin-top: 4px;
       text-transform: none;
-      letter-spacing: 0;
+      letter-spacing: normal;
     }
 
+    /* Células com divisões bem visíveis */
     td {
-      padding: 20px 15px;
-      border-bottom: 1px solid var(--border-color);
-      transition: background-color 0.2s ease;
+      padding: 16px 12px;
+      border: 1px solid var(--border-grid);
+      vertical-align: middle;
+      font-size: 14px;
+      transition: background-color 0.15s ease;
     }
 
-    tbody tr:last-child td {
-      border-bottom: none;
+    tbody tr:nth-child(even) {
+      background-color: var(--row-alt);
     }
 
-    tbody tr:hover td {
+    tbody tr:hover {
       background-color: var(--row-hover);
     }
 
-    .main-text {
+    .week-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 14px;
       display: block;
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--text-main);
-      margin-bottom: 4px;
     }
 
-    .sub-text {
-      display: block;
-      font-size: 13px;
+    .week-note {
+      font-size: 12px;
       color: var(--text-muted);
+      margin-top: 4px;
+      display: block;
+      font-style: italic;
     }
 
-    /* Responsividade básica para telas menores */
-    @media (max-width: 768px) {
+    .person-main {
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 15px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .assistant-tag {
+      display: inline-block;
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid #cbd5e1;
+    }
+
+    .tribuna-person {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 15px;
+      background-color: #e2e8f0;
+      padding: 6px 14px;
+      border-radius: 6px;
+      display: inline-block;
+      border: 1px solid #cbd5e1;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 10px;
+      }
       th, td {
-        padding: 15px 10px;
-      }
-      .main-text {
-        font-size: 14px;
-      }
-      .sub-text {
+        padding: 10px 6px;
         font-size: 12px;
+      }
+      .person-main, .tribuna-person {
+        font-size: 13px;
+      }
+      .assistant-tag {
+        font-size: 10px;
+        padding: 2px 6px;
       }
     }
   </style>
@@ -122,97 +175,97 @@
 <body>
 
 <div class="container">
-  <h2>Programação de Agosto e Setembro</h2>
-  
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Semana</th>
-          <th>
-            Cabine de Som
-            <span class="sub-text">(Meio de semana)</span>
-          </th>
-          <th>
-            Cabine de Som
-            <span class="sub-text">(Fim de semana)</span>
-          </th>
-          <th>Responsável da Tribuna</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- 1ª Semana -->
-        <tr>
-          <td>
-            <span class="main-text">1ª Semana</span>
-            <span class="sub-text">(Após o congresso de Agosto)</span>
-          </td>
-          <td>
-            <span class="main-text">Eduine</span>
-            <span class="sub-text">(Assistente: Morse)</span>
-          </td>
-          <td>
-            <span class="main-text">Morse</span>
-            <span class="sub-text">(Assistente: Eduine)</span>
-          </td>
-          <td>
-            <span class="main-text">Tito</span>
-          </td>
-        </tr>
-        <!-- 2ª Semana -->
-        <tr>
-          <td>
-            <span class="main-text">2ª Semana</span>
-          </td>
-          <td>
-            <span class="main-text">Hélder</span>
-            <span class="sub-text">(Assistente: Eduine)</span>
-          </td>
-          <td>
-            <span class="main-text">Eduine</span>
-            <span class="sub-text">(Assistente: Hélder)</span>
-          </td>
-          <td>
-            <span class="main-text">Morse</span>
-          </td>
-        </tr>
-        <!-- 3ª Semana -->
-        <tr>
-          <td>
-            <span class="main-text">3ª Semana</span>
-          </td>
-          <td>
-            <span class="main-text">Tito</span>
-            <span class="sub-text">(Assistente: Morse)</span>
-          </td>
-          <td>
-            <span class="main-text">Tito</span>
-            <span class="sub-text">(Assistente: Morse)</span>
-          </td>
-          <td>
-            <span class="main-text">Hélder</span>
-          </td>
-        </tr>
-        <!-- 4ª Semana -->
-        <tr>
-          <td>
-            <span class="main-text">4ª Semana</span>
-          </td>
-          <td>
-            <span class="main-text">Tito</span>
-            <span class="sub-text">(Assistente: Hélder)</span>
-          </td>
-          <td>
-            <span class="main-text">Hélder</span>
-            <span class="sub-text">(Assistente: Tito)</span>
-          </td>
-          <td>
-            <span class="main-text">Eduine</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="title-box">
+    <h2>Programação de Agosto e Setembro</h2>
   </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 28%;">Semana</th>
+        <th style="width: 26%;">
+          Cabine de Som
+          <span class="sub-header">(Meio de semana)</span>
+        </th>
+        <th style="width: 26%;">
+          Cabine de Som
+          <span class="sub-header">(Fim de semana)</span>
+        </th>
+        <th style="width: 20%;">Responsável da Tribuna</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 1ª Semana -->
+      <tr>
+        <td>
+          <span class="week-title">1ª Semana</span>
+          <span class="week-note">(Após o congresso de Agosto)</span>
+        </td>
+        <td>
+          <span class="person-main">Eduine</span>
+          <span class="assistant-tag">Assistente: Morse</span>
+        </td>
+        <td>
+          <span class="person-main">Morse</span>
+          <span class="assistant-tag">Assistente: Eduine</span>
+        </td>
+        <td>
+          <span class="tribuna-person">Tito</span>
+        </td>
+      </tr>
+      <!-- 2ª Semana -->
+      <tr>
+        <td>
+          <span class="week-title">2ª Semana</span>
+        </td>
+        <td>
+          <span class="person-main">Hélder</span>
+          <span class="assistant-tag">Assistente: Eduine</span>
+        </td>
+        <td>
+          <span class="person-main">Eduine</span>
+          <span class="assistant-tag">Assistente: Hélder</span>
+        </td>
+        <td>
+          <span class="tribuna-person">Morse</span>
+        </td>
+      </tr>
+      <!-- 3ª Semana -->
+      <tr>
+        <td>
+          <span class="week-title">3ª Semana</span>
+        </td>
+        <td>
+          <span class="person-main">Tito</span>
+          <span class="assistant-tag">Assistente: Morse</span>
+        </td>
+        <td>
+          <span class="person-main">Tito</span>
+          <span class="assistant-tag">Assistente: Morse</span>
+        </td>
+        <td>
+          <span class="tribuna-person">Hélder</span>
+        </td>
+      </tr>
+      <!-- 4ª Semana -->
+      <tr>
+        <td>
+          <span class="week-title">4ª Semana</span>
+        </td>
+        <td>
+          <span class="person-main">Tito</span>
+          <span class="assistant-tag">Assistente: Hélder</span>
+        </td>
+        <td>
+          <span class="person-main">Hélder</span>
+          <span class="assistant-tag">Assistente: Tito</span>
+        </td>
+        <td>
+          <span class="tribuna-person">Eduine</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 </body>
