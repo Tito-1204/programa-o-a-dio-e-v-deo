@@ -8,11 +8,10 @@
     :root {
       --bg-main: #f4f4f4;          /* Fundo cinza neutro bem claro */
       --card-bg: #ffffff;          /* Fundo branco puro */
-      --header-bg: #333333;        /* Cinza escuro neutro para o cabeçalho */
+      --header-bg: #4d4d4d;        /* Cinza um pouco mais claro (mantém texto branco) */
       --header-text: #ffffff;
-      --header-subtext: #cccccc;   /* Cinza claro neutro para subtexto */
-      --border-strong: #555555;    /* Borda externa bem marcada e visível */
-      --border-grid: #b0b0b0;      /* Linhas de divisão das células visíveis */
+      --header-subtext: #dddddd;   /* Cinza claro para subtexto no cabeçalho */
+      --border-grid: #c8c8c8;      /* Linhas de divisão internas das células */
       --text-dark: #111111;        /* Texto principal quase preto */
       --text-muted: #555555;      /* Texto secundário em cinza */
       --badge-bg: #e5e5e5;        /* Fundo dos crachás em cinza claro */
@@ -42,9 +41,10 @@
       width: 100%;
       max-width: 950px;
       background-color: var(--card-bg);
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      border: 2px solid var(--border-strong);
+      border-radius: 12px;
+      /* Sombra leve misturada com brilho/shadow branco para suavizar com o fundo */
+      box-shadow: 0 0 25px 2px rgba(255, 255, 255, 0.9), 0 8px 20px rgba(0, 0, 0, 0.04);
+      border: none;               /* Borda externa removida */
       overflow: hidden;
     }
 
@@ -53,7 +53,7 @@
       color: var(--text-dark);
       padding: 22px 20px;
       text-align: center;
-      border-bottom: 2px solid var(--border-strong);
+      border-bottom: 1px solid var(--border-grid);
     }
 
     .title-box h2 {
@@ -71,7 +71,7 @@
       text-align: center;
     }
 
-    /* Cabeçalho Cinza Escuro Neutro */
+    /* Cabeçalho com tom de cinza ajustado */
     th {
       background-color: var(--header-bg);
       color: var(--header-text);
@@ -80,7 +80,8 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      border: 1px solid var(--border-strong);
+      border: 1px solid var(--border-grid);
+      border-top: none;           /* Remove borda no topo da tabela */
     }
 
     th .sub-header {
@@ -93,13 +94,26 @@
       letter-spacing: normal;
     }
 
-    /* Células com divisões fortemente marcadas em cinza neutro */
+    /* Células da tabela */
     td {
       padding: 16px 12px;
       border: 1px solid var(--border-grid);
       vertical-align: middle;
       font-size: 14px;
       transition: background-color 0.15s ease;
+    }
+
+    /* Removendo bordas nas extremidades para ficar fluido com o fundo do cartão */
+    tr td:first-child, tr th:first-child {
+      border-left: none;
+    }
+
+    tr td:last-child, tr th:last-child {
+      border-right: none;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
     }
 
     tbody tr:nth-child(even) {
@@ -148,10 +162,10 @@
       font-weight: 700;
       color: #111111;
       font-size: 15px;
-      background-color: transparent; /* Fundo idêntico ao da tabela nesta área */
+      background-color: transparent;
       padding: 0;
       display: inline-block;
-      border: none;                  /* Sem bordas */
+      border: none;
     }
 
     @media (max-width: 640px) {
