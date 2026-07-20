@@ -49,8 +49,8 @@
     }
 
     .title-box {
-      background-color: #1a1a1a;   /* Preto suave/Cinza grafite */
-      color: #ffffff;
+      background-color: #f8f8f8;   /* Fundo cinza claro */
+      color: var(--text-dark);
       padding: 22px 20px;
       text-align: center;
       border-bottom: 2px solid var(--border-strong);
@@ -62,6 +62,7 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       margin: 0;
+      color: var(--text-dark);
     }
 
     table {
@@ -147,11 +148,10 @@
       font-weight: 700;
       color: #111111;
       font-size: 15px;
-      background-color: #e5e5e5;
-      padding: 6px 14px;
-      border-radius: 6px;
+      background-color: transparent; /* Fundo idêntico ao da tabela nesta área */
+      padding: 0;
       display: inline-block;
-      border: 1px solid #b0b0b0;
+      border: none;                  /* Sem bordas */
     }
 
     @media (max-width: 640px) {
